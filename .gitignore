@@ -1,0 +1,12 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+.idea
+.env
+.env.*
+build
+*.tsbuildinfo
+.vscode/*
+src/utils/Transactions.json
