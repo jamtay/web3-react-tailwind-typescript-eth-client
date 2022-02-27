@@ -2,11 +2,13 @@
 
 This application is a web3 application developed using react, typescript and solidity. Connect your wallet, send ethereum transactions including a reference to a gif, display latest transactions including the gif.
 
-# Demo - TODO: Upload actual videos
+# Demo
 
-[![Login demo](demo/Login.mov)](demo/Login.mov)
+[![Login demo](demo/Login.gif)](demo/Login.gif)
 
-[![Transaction demo](demo/Transaction.mov)](demo/Transaction.mov)
+[![Transaction demo part 1](demo/TransactionPart1.gif)](demo/TransactionPart1.gif)
+
+[![Transaction demo part 2](demo/TransactionPart2.gif)](demo/TransactionPart2.gif)
 
 # Setup
 
@@ -14,9 +16,9 @@ This application is a web3 application developed using react, typescript and sol
 - Create metamask account: https://metamask.io/
 - Install secret scanner: `brew install git-secrets`. More info at https://github.com/awslabs/git-secrets
 - Add common AWS patterns to the git config : `git secrets --register-aws --global`
-- Setup environment variable: `export VITE_GIPHY_API_KEY=<giphyApiKey`. More info https://developers.giphy.com/docs/api#quick-start-guide.
-- Setup environment variable: `export VITE_CONTRACT_ADDRESS=<contractAddress>` **TBC - how to generate**
-- Setup src/utils/Transactions.json: **TBC - how to generate**
+- Setup environment variable: `export VITE_GIPHY_API_KEY=<giphyApiKey>`. More info https://developers.giphy.com/docs/api#quick-start-guide.
+- Setup environment variable: `export VITE_CONTRACT_ADDRESS=<contractAddress>`. To get the contract address follow instructions from **TBC - Add from smart_contract git** which should be printed to the console after running `npx hardhat run scripts/deploy.js --network ropsten`
+- Setup src/utils/Transactions.json: To generate this file, follow instructions from **TBC - Add from smart_contract git** in the location `artifacts/contracts/Transactions.sol/Transactions.json`
 - Run: `npm install`
 - Run: `npm run dev`
 
