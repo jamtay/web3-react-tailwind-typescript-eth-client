@@ -162,6 +162,7 @@ export const TransactionsProvider: React.FC = ({ children }) => {
     errorHandler(async () => {
       const { addressTo, amount, keyword, message } = formData;
       const transactionsContract = getEthereumContract();
+      const gas = ethers.utils.parseEther('0.000021'); // 21000 GWEI (sub unit of ethereum)
       const parsedAmount = ethers.utils.parseEther(amount);
 
       await ethereum.request({
@@ -170,7 +171,7 @@ export const TransactionsProvider: React.FC = ({ children }) => {
           {
             from: currentAccount,
             to: addressTo,
-            gas: '0x5208', // 21000 GWEI (sub unit of ethereum)
+            gas: gas._hex,
             value: parsedAmount._hex,
           },
         ],
@@ -195,6 +196,18 @@ export const TransactionsProvider: React.FC = ({ children }) => {
       setClearForm(false);
     });
   };
+
+  // Reload the page when metamask information changes (login, logout, connect wallet)
+  useEffect(() => {
+    if (ethereum) {
+      ethereum.on('chainChanged', () => {
+        window.location.reload();
+      });
+      ethereum.on('accountsChanged', () => {
+        window.location.reload();
+      });
+    }
+  });
 
   useEffect(() => {
     checkIfWalletIsConnected();

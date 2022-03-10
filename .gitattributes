@@ -1,3 +1,1 @@
-*.mov filter=lfs diff=lfs merge=lfs -text
-demo/Transaction.mov filter=lfs diff=lfs merge=lfs -text
-demo/Login.mov filter=lfs diff=lfs merge=lfs -text
+
