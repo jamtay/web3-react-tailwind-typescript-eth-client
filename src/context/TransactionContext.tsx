@@ -162,7 +162,7 @@ export const TransactionsProvider: React.FC = ({ children }) => {
     errorHandler(async () => {
       const { addressTo, amount, keyword, message } = formData;
       const transactionsContract = getEthereumContract();
-      const gas = ethers.utils.parseEther('0.000021'); // 21000 GWEI (sub unit of ethereum)
+      const gas = ethers.utils.parseUnits('0.000021', 'gwei'); // 21000 GWEI (sub unit of ethereum)
       const parsedAmount = ethers.utils.parseEther(amount);
 
       await ethereum.request({
