@@ -12,13 +12,13 @@ This application is a web3 application developed using react, typescript and sol
 
 # Setup
 
-- Setup smart contract: **TBC - add once pushed**
+- Setup [smart contract](https://github.com/jamtay/solidity-hardhat-js-gif-smart-contract)
 - Create metamask account: https://metamask.io/
 - Install secret scanner: `brew install git-secrets`. More info at https://github.com/awslabs/git-secrets
 - Add common AWS patterns to the git config : `git secrets --register-aws --global`
 - Setup environment variable: `export VITE_GIPHY_API_KEY=<giphyApiKey>`. More info https://developers.giphy.com/docs/api#quick-start-guide.
-- Setup environment variable: `export VITE_CONTRACT_ADDRESS=<contractAddress>`. To get the contract address follow instructions from **TBC - Add from smart_contract git** which should be printed to the console after running `npx hardhat run scripts/deploy.js --network ropsten`
-- Setup src/utils/Transactions.json: To generate this file, follow instructions from **TBC - Add from smart_contract git** in the location `artifacts/contracts/Transactions.sol/Transactions.json`
+- Setup environment variable: `export VITE_CONTRACT_ADDRESS=<contractAddress>`. To get the contract address follow instructions from [smart contract](https://github.com/jamtay/solidity-hardhat-js-gif-smart-contract) which should be printed to the console after running `npx hardhat run scripts/deploy.js --network ropsten`
+- Setup src/utils/Transactions.json: To generate this file, follow instructions from [smart contract](https://github.com/jamtay/solidity-hardhat-js-gif-smart-contract) in the location `artifacts/contracts/Transactions.sol/Transactions.json`
 - Run: `npm install`
 - Run: `npm run dev`
 
@@ -27,7 +27,7 @@ This application is a web3 application developed using react, typescript and sol
 - Vite
 - TailwindCSS
 - Husky, lint-staged, prettier, eslint and git-secrets
-- Solidity contract can be found here **TBC - add once pushed**
+- Solidity contract can be found [here](https://github.com/jamtay/solidity-hardhat-js-gif-smart-contract)
 
 # Initial tutorial code
 
